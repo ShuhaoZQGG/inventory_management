@@ -42,7 +42,14 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 gem 'webpacker', '~> 4.3.x'
+gem 'rswag', git: 'https://github.com/rswag/rswag.git', branch: 'master'
+gem 'rswag-api'
+gem 'rswag-ui'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rswag-specs'
+end
 # Use Sass to process CSS
 # gem "sassc-rails"
 
